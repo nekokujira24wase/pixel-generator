@@ -10,26 +10,25 @@
 </head>
 <body>
     <div class="container">
-        <!-- グリッド数の調整部分 -->
+        <!-- ここからグリッド数の調整部分 -->
         <div class="range-wrapper">
-            <div>
-                <label for="width-range">Grid Width</label><br>
-                <input type="range" id="width-range" min="1" max="700">
-                <span id="width-value">000</span>
+            <div class="bar-box">
+                <label for="width-range">Col Grid : </label><span id="width-value">10</span>
+                <input type="range" id="width-range" class="bar" min="1" max="50" value="10">
             </div>
-            <div>
-                <label for="height-range">Height Width</label><br>
-                <input type="range" id="height-range" min="1" max="700">
-                <span id="height-value">000</span>
+            <div class="bar-box">
+                <label for="height-range">Row Grid : </label><span id="height-value">10</span>
+                <input type="range" id="height-range" class="bar" min="1" max="50" value="10">
             </div>
         </div>
+        <!-- ここまでグリッド数の調整部分 -->
 
-        <!-- ペンや消しゴム等のボタン -->
+        <!-- ここからペンや消しゴム等のボタン -->
         <div class="item-wrapper">
-            <button class="item">
+            <button id="pen-btn" class="active">
                 <i class="ri-pencil-line"></i>
             </button>
-            <button class="item">
+            <button id="erase-btn">
                 <i class="ri-eraser-line"></i>
             </button>
             <input type="color" id="color-input">
@@ -37,19 +36,20 @@
                 CLEAR
             </button>
             <button id="download">
-                <i class="ri-download-2-line">as png</i>
+                <i class="ri-download-2-line"></i>
             </button>
         </div>
+        <!-- ここまでペンや消しゴム等のボタン -->
 
+        <!-- ここからグリッド生成部分 -->
         <div class="pixel-wrapper">
-            <div class="generator">
-
-            </div>
+            <div class="generator"></div>
         </div>
-
-
+        <!-- ここまでグリッド生成部分 -->
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
